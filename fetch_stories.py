@@ -6,7 +6,7 @@ from models.Story import Story
 def fetch_stories(event, context):
   user = Session.user(event.headers['Authorization'])
 
-  if(user is None):
+  if(not bool(user)):
     return Response(401, {
       'status': False,
       'message': 'Unauthorized! Invalid or missing Auth token.'

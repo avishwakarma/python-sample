@@ -2,9 +2,9 @@ from utils.session import Session
 from utils.response import Response
 
 def check_login(event, context):
-  isValid = Session.check(event.headers['Authorization'])
+  user = Session.user(event.headers['Authorization'])
 
-  if(isValid is not True):
+  if(not bool(user)):
     return Response(401, {
       'status': False,
       'message': 'Unauthorized! Invalid or missing Auth token.'

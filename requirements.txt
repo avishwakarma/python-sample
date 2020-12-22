@@ -1,3 +1,4 @@
 python-dotenv==0.15.0
 pony==0.7.14
 psycopg2==2.8.6
+pyjwt==1.7.1
