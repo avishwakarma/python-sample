@@ -1,5 +1,4 @@
 from pony.orm import *
-from utils.db import db
 from config import LIMIT, DB_HOST, DB_NAME, DB_USER, DB_PASSWORD
 
 db = Database()
